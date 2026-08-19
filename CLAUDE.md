@@ -27,13 +27,9 @@ and mock data model, not as code to import directly:
 When implementing real screens, treat these files as the UX/content spec (routes, fields, states) to port
 into proper App Router pages/components, not as production code.
 
-## Commands
+## Skills
 
-- `npm run dev` — start the dev server (Turbopack, per Next.js 16 default).
-- `npm run build` — production build.
-- `npm run start` — run the production build.
-- `npm run lint` — ESLint (flat config in `eslint.config.mjs`, extends `eslint-config-next`
-  core-web-vitals + typescript). No test runner is configured yet.
+Usa siempre /frontend-design para diseñar la interfaz del usuario
 
 ## Workflow
 
