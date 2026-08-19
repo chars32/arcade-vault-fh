@@ -10,7 +10,7 @@ Arcade Vault ("una plataforma para jugar online y competir por la mayor cantidad
 16 app (App Router, React 19, Tailwind CSS 4) currently at the `create-next-app` starting point —
 `app/page.tsx` and `app/layout.tsx` are still boilerplate.
 
-**`resources/templates/`** holds a standalone HTML/React prototype (`Arcade Vault.html` + `styles.css` +
+**`references/templates/`** holds a standalone HTML/React prototype (`Arcade Vault.html` + `styles.css` +
 `.jsx` files loaded via in-browser Babel, no build step) that is the design/product reference for the real
 app. It is not part of the Next.js build. Use it to understand the intended screens, copy (Spanish UI),
 and mock data model, not as code to import directly:
