@@ -15,4 +15,10 @@ https://github.com/Klerith/fernando-skills
 npx skills@latest add Klerith/fernando-skills
 ```
 
-Hola Mundo con repositorio publico.
+## Commands
+
+- `npm run dev` — start the dev server (Turbopack, per Next.js 16 default).
+- `npm run build` — production build.
+- `npm run start` — run the production build.
+- `npm run lint` — ESLint (flat config in `eslint.config.mjs`, extends `eslint-config-next`
+  core-web-vitals + typescript). No test runner is configured yet.
