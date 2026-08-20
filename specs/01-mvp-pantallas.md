@@ -1,6 +1,6 @@
 # SPEC 01 — MVP de pantallas visuales de Arcade Vault
 
-> **Status:** Aprobado
+> **Status:** Implementado
 > **Depends on:** —
 > **Date:** 2026-08-20
 > **Objective:** Portar las cinco pantallas del prototipo (`references/templates/`) a rutas reales del App Router de Next.js, con navegación, datos mock y sesión/puntuaciones en localStorage, sin implementar ningún juego real.
@@ -94,24 +94,24 @@ Convenciones:
 
 ## Acceptance criteria
 
-- [ ] `/` muestra el grid de los 8 juegos, con buscador y filtro de categoría funcionando.
-- [ ] Buscar un término sin resultados muestra el estado "NO HAY RESULTADOS".
-- [ ] Click en una card o en su botón "JUGAR" navega a `/juegos/[id]` con los datos correctos del juego.
-- [ ] `/juegos/[id]` muestra cover, descripción, stat-strip y un leaderboard de 10 filas generado con `seededScores`.
-- [ ] Un `id` inexistente en `/juegos/[id]` dispara la página `not-found` de Next.
-- [ ] "JUGAR AHORA" navega a `/juegos/[id]/jugar`.
-- [ ] En el reproductor, la puntuación sube sola cada ~220ms mientras no está en pausa ni terminado.
-- [ ] El botón "PAUSA"/"REANUDAR" detiene y reanuda el incremento de puntuación.
-- [ ] El botón "FIN" abre el modal de fin de partida con la puntuación final.
-- [ ] Guardar la puntuación con iniciales agrega una entrada a `av_scores` en `localStorage` y muestra el toast "PUNTUACIÓN GUARDADA\_".
-- [ ] "JUGAR DE NUEVO" reinicia puntuación, vidas, nivel y cierra el modal.
-- [ ] `/auth` permite loguear con cualquier usuario/contraseña, guarda `av_user` en `localStorage` y redirige a `/`.
-- [ ] "JUGAR COMO INVITADO" navega a `/` sin usuario logueado.
-- [ ] Tras loguear, el Nav muestra el nombre de usuario en vez del botón "Iniciar Sesión", y permite cerrar sesión.
-- [ ] `/salon-de-la-fama` muestra tabs por juego, un podio de top 3 y una tabla de 12 filas que cambian al seleccionar otro juego.
-- [ ] Con sesión iniciada, `/salon-de-la-fama` muestra la fila "▸ TU MEJOR MARCA EN {juego}".
-- [ ] En un viewport móvil (<840px), el Nav colapsa a hamburguesa y el panel lateral se abre/cierra correctamente.
-- [ ] `npm run build` completa sin errores de TypeScript ni de rutas.
+- [x] `/` muestra el grid de los 8 juegos, con buscador y filtro de categoría funcionando.
+- [x] Buscar un término sin resultados muestra el estado "NO HAY RESULTADOS".
+- [x] Click en una card o en su botón "JUGAR" navega a `/juegos/[id]` con los datos correctos del juego.
+- [x] `/juegos/[id]` muestra cover, descripción, stat-strip y un leaderboard de 10 filas generado con `seededScores`.
+- [x] Un `id` inexistente en `/juegos/[id]` dispara la página `not-found` de Next.
+- [x] "JUGAR AHORA" navega a `/juegos/[id]/jugar`.
+- [x] En el reproductor, la puntuación sube sola cada ~220ms mientras no está en pausa ni terminado.
+- [x] El botón "PAUSA"/"REANUDAR" detiene y reanuda el incremento de puntuación.
+- [x] El botón "FIN" abre el modal de fin de partida con la puntuación final.
+- [x] Guardar la puntuación con iniciales agrega una entrada a `av_scores` en `localStorage` y muestra el toast "PUNTUACIÓN GUARDADA\_".
+- [x] "JUGAR DE NUEVO" reinicia puntuación, vidas, nivel y cierra el modal.
+- [x] `/auth` permite loguear con cualquier usuario/contraseña, guarda `av_user` en `localStorage` y redirige a `/`.
+- [x] "JUGAR COMO INVITADO" navega a `/` sin usuario logueado.
+- [x] Tras loguear, el Nav muestra el nombre de usuario en vez del botón "Iniciar Sesión", y permite cerrar sesión.
+- [x] `/salon-de-la-fama` muestra tabs por juego, un podio de top 3 y una tabla de 12 filas que cambian al seleccionar otro juego.
+- [x] Con sesión iniciada, `/salon-de-la-fama` muestra la fila "▸ TU MEJOR MARCA EN {juego}".
+- [x] En un viewport móvil (<840px), el Nav colapsa a hamburguesa y el panel lateral se abre/cierra correctamente.
+- [x] `npm run build` completa sin errores de TypeScript ni de rutas.
 
 ## Decisions
 
