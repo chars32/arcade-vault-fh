@@ -1,6 +1,6 @@
 # SPEC 02 — Página Home (landing)
 
-> **Status:** Aprobado
+> **Status:** Implementado
 > **Depends on:** SPEC 01
 > **Date:** 2026-08-21
 > **Objective:** Portar la landing (`references/templates/home-about/home.jsx`) como la nueva ruta raíz `/`, moviendo la Biblioteca actual a `/biblioteca` y respetando toda la navegación del prototipo excepto el link "Acerca de", que queda sin funcionalidad.
@@ -43,20 +43,20 @@ Esta spec no introduce estructuras de datos nuevas. Reutiliza `GAMES` de `lib/da
 
 ## Acceptance criteria
 
-- [ ] `/` muestra la landing completa: hero con siluetas animadas, sección "¿Por qué Arcade Vault?", preview de 6 juegos reales, stats, actividad en vivo, precios/FAQ y CTA final.
-- [ ] Las secciones de Home con clase `reveal` aparecen animadas (`in`) al hacer scroll hasta ellas.
-- [ ] `/biblioteca` muestra el mismo contenido y comportamiento (buscador, filtro, grid) que tenía `/` antes de este spec.
-- [ ] El Nav muestra 4 links: Inicio, Biblioteca, Salón de la Fama, Acerca de — en ese orden, en desktop y en el panel móvil.
-- [ ] Click en "Acerca de" no navega a ninguna parte ni produce error en consola.
-- [ ] "EXPLORAR JUEGOS" y "VER TODOS LOS JUEGOS →" en Home navegan a `/biblioteca`.
-- [ ] "CREAR CUENTA" (hero) y "EMPEZAR GRATIS →" (precios) en Home navegan a `/auth`.
-- [ ] "VER SALÓN →" en Home navega a `/salon-de-la-fama`.
-- [ ] "INSERTAR MONEDA →" (CTA final) navega a `/biblioteca`.
-- [ ] Click en una mini-card de la sección "Juegos disponibles ahora" navega a `/juegos/[id]` del juego correcto.
-- [ ] El logo del Nav navega a `/` desde cualquier pantalla.
-- [ ] "VOLVER AL VAULT" en el detalle de juego, el botón de salir del reproductor, el botón de volver en Salón de la Fama, y el flujo de login/registro/invitado en `/auth` navegan a `/biblioteca` (no a `/`).
-- [ ] En viewport móvil (<840px), las secciones de Home colapsan correctamente y el panel lateral del Nav muestra los 4 links.
-- [ ] `npm run build` completa sin errores de TypeScript ni de rutas.
+- [x] `/` muestra la landing completa: hero con siluetas animadas, sección "¿Por qué Arcade Vault?", preview de 6 juegos reales, stats, actividad en vivo, precios/FAQ y CTA final.
+- [x] Las secciones de Home con clase `reveal` aparecen animadas (`in`) al hacer scroll hasta ellas.
+- [x] `/biblioteca` muestra el mismo contenido y comportamiento (buscador, filtro, grid) que tenía `/` antes de este spec.
+- [x] El Nav muestra 4 links: Inicio, Biblioteca, Salón de la Fama, Acerca de — en ese orden, en desktop y en el panel móvil.
+- [x] Click en "Acerca de" no navega a ninguna parte ni produce error en consola.
+- [x] "EXPLORAR JUEGOS" y "VER TODOS LOS JUEGOS →" en Home navegan a `/biblioteca`.
+- [x] "CREAR CUENTA" (hero) y "EMPEZAR GRATIS →" (precios) en Home navegan a `/auth`.
+- [x] "VER SALÓN →" en Home navega a `/salon-de-la-fama`.
+- [x] "INSERTAR MONEDA →" (CTA final) navega a `/biblioteca`.
+- [x] Click en una mini-card de la sección "Juegos disponibles ahora" navega a `/juegos/[id]` del juego correcto.
+- [x] El logo del Nav navega a `/` desde cualquier pantalla.
+- [x] "VOLVER AL VAULT" en el detalle de juego, el botón de salir del reproductor, el botón de volver en Salón de la Fama, y el flujo de login/registro/invitado en `/auth` navegan a `/biblioteca` (no a `/`).
+- [x] En viewport móvil (<840px), las secciones de Home colapsan correctamente y el panel lateral del Nav muestra los 4 links.
+- [x] `npm run build` completa sin errores de TypeScript ni de rutas.
 
 ## Decisions
 
