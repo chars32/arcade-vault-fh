@@ -1,6 +1,6 @@
 # SPEC 03 — Acerca de + formulario de contacto con Resend
 
-> **Status:** Aprobado
+> **Status:** Implementado
 > **Depends on:** SPEC 01, SPEC 02
 > **Date:** 2026-08-21
 > **Objective:** Portar la pantalla "Acerca de" (`references/templates/home-about/about.jsx`) como la ruta `/acerca-de`, enlazada desde el Nav, con el formulario de contacto enviando correos reales vía Resend a través de una Server Action.
@@ -70,16 +70,16 @@ No hay tipos nuevos en `lib/`. El formulario en sí (`{ name, email, msg }`) viv
 
 ## Acceptance criteria
 
-- [ ] `/acerca-de` muestra el hero "Acerca de" con mission statement y las 3 tarjetas de `highlight-row`.
-- [ ] Las secciones con clase `reveal` aparecen animadas (`in`) al hacer scroll hasta ellas.
-- [ ] El Nav muestra "Acerca de" como link funcional (desktop y panel móvil) que navega a `/acerca-de` y se marca activo ahí.
-- [ ] Enviar el formulario con algún campo vacío dispara la animación `shake` y no llama a la Server Action.
-- [ ] Enviar el formulario con un correo de formato inválido (ej. `sinarroba`) dispara `shake` y no llama a la Server Action.
-- [ ] Con los 3 campos válidos, al enviar el botón muestra "ENVIANDO…" y se deshabilita hasta que la Server Action resuelve.
-- [ ] Un envío exitoso reemplaza el formulario por el bloque `terminal-success` con el nombre ingresado, igual que el prototipo.
-- [ ] Un envío fallido (ej. `RESEND_API_KEY` inválida o ausente) muestra un mensaje de error inline sin perder los valores ya escritos en el formulario, y permite reintentar.
+- [x] `/acerca-de` muestra el hero "Acerca de" con mission statement y las 3 tarjetas de `highlight-row`.
+- [x] Las secciones con clase `reveal` aparecen animadas (`in`) al hacer scroll hasta ellas.
+- [x] El Nav muestra "Acerca de" como link funcional (desktop y panel móvil) que navega a `/acerca-de` y se marca activo ahí.
+- [x] Enviar el formulario con algún campo vacío dispara la animación `shake` y no llama a la Server Action.
+- [x] Enviar el formulario con un correo de formato inválido (ej. `sinarroba`) dispara `shake` y no llama a la Server Action.
+- [x] Con los 3 campos válidos, al enviar el botón muestra "ENVIANDO…" y se deshabilita hasta que la Server Action resuelve.
+- [x] Un envío exitoso reemplaza el formulario por el bloque `terminal-success` con el nombre ingresado, igual que el prototipo.
+- [x] Un envío fallido (ej. `RESEND_API_KEY` inválida o ausente) muestra un mensaje de error inline sin perder los valores ya escritos en el formulario, y permite reintentar.
 - [ ] Con una API key válida de Resend y una cuenta cuya dirección registrada sea `chars24@gmail.com`, el correo recibido tiene el asunto `Nuevo mensaje de contacto — {nombre}` y el cuerpo incluye nombre, correo y mensaje.
-- [ ] `npm run build` completa sin errores de TypeScript ni de rutas.
+- [x] `npm run build` completa sin errores de TypeScript ni de rutas.
 
 ## Decisions
 
